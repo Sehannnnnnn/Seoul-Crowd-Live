@@ -21,6 +21,6 @@ export const fetchLiveData = async (placeName) => {
                         name : placeName,
                         citydata : seoulcitydata.CITYDATA.LIVE_PPLTN_STTS
                     }
-                })
+                }).catch((err) => placeName);
     return response;
 }

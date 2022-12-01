@@ -33,7 +33,6 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`server runs successfully on port ${port}!`);
 })
-
 // var process = spawn("node", ["server/fetchserver.js"]);
 
 // process.stdout.on("data", function (data) {

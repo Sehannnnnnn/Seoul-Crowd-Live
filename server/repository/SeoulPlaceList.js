@@ -1,7 +1,7 @@
 export const SEOUL_PLACE_LIST = [
     {
         id : 1,
-        name : "강남 MICE 관강특구"
+        name : "강남 MICE 관광특구"
     }
     ,{
         id : 2,
