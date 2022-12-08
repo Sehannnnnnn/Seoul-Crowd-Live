@@ -3,7 +3,7 @@ import { toJson } from 'xml2json';
 import fetch from 'node-fetch';
 
 //장소별 실시간 정보 + XML 파싱 to JSON
-export const fetchLiveData = async (placeName) => {
+export const fetchLiveData = async (id, placeName) => {
     const response = await fetch(API_URL(placeName))
                 .then((res) => res.text())
                 .then((xml) => toJson(xml, {
@@ -18,6 +18,7 @@ export const fetchLiveData = async (placeName) => {
                 .then((obj) => {
                     const seoulcitydata = Object.values(obj)[0]
                     return {
+                        id: id,
                         name : placeName,
                         citydata : seoulcitydata.CITYDATA.LIVE_PPLTN_STTS
                     }
