@@ -1,4 +1,4 @@
-import { API_URL } from "../static/API_config.js"
+import { API_URL } from "../config/API_config.js"
 import { toJson } from 'xml2json';
 import fetch from 'node-fetch';
 
