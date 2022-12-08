@@ -1,10 +1,19 @@
 import { SEOUL_PLACE_LIST } from "../repository/SeoulPlaceList.js";
-import { fetchLiveData } from "../service/fetchLiveData.js";
+import { readInfoDB } from "../utils/readInfoDB.js";
 
-const placeName = SEOUL_PLACE_LIST[49].name; 
+// const placeName = SEOUL_PLACE_LIST[49].name; 
 
 const liveInfo = async (req, res) => {
-    await fetchLiveData(placeName).then(data => res.send(data));
+    const id = parseInt(req.query.id);
+    const placeName = SEOUL_PLACE_LIST.filter((place) => place.id === id)[0].name
+    await readInfoDB(id,placeName).then(data => {
+        if (data.length == 1) {
+            res.status(200).send(data[0])
+        }
+        else {
+            res.status(404).send("Data Not Found")
+        }
+    })
 }
 
 
