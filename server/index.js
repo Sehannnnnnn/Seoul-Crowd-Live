@@ -5,7 +5,7 @@ import liveInfoRouter from './router/liveInfoRouter.js';
 import morgan from 'morgan';
 import { scheduleJob } from 'node-schedule';
 import { fetchAllLiveData } from './utils/fetchAllLiveData.js';
-import { testWriteTimeLog as writeTimeLog } from './utils/writeTimelog.js';
+import { writeTimeLog } from './utils/writeTimelog.js';
 
 const app = express();
 const MAIN_PORT = 8000;
@@ -44,10 +44,8 @@ app.listen(MAIN_PORT, () => {
 
 //api fetch, 재작성
 app.listen(SCHEDULE_PORT, () => {
-  scheduleJob('*/30 * * * *', function() {
-    const KR_TIME_DIFF = 9 * 60 * 60 * 1000;
-    const date = new Date().toLocaleString('ko-KR', { timeZone: 'UTC' });
-    writeTimeLog(date);
+  scheduleJob('*/5 * * * *', function() {
+    writeTimeLog();
     fetchAllLiveData()
   })
 })

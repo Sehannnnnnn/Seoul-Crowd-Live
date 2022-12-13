@@ -125,7 +125,7 @@ export const SEOUL_PLACE_LIST = [
     },
     {
         id : 32,
-        name : "상수카페거리"
+        name : "성수카페거리"
     },
     {
         id : 33,

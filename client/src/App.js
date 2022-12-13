@@ -1,14 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React, {useEffect} from 'react';
+import Splash from './page/Splash';
+import Main from './page/Main';
+import List from './page/List';
+import Info from './page/Info';
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchPlaceList } from './reducer/placeReducer'
 function App() {
+  const dispatch = useDispatch();
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }
+  useEffect(() => {
+    setScreenSize();
+    dispatch(fetchPlaceList())
+  },[]);
+
+  
   return (
-    <div className="App">
-      {/* 헤더 있고
-      바디 있고
-      푸터 있고
-      헤더 옆에 사이드 네비게이터 있고  */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<Splash/>} />
+        <Route path="/main" element={<Main/>}/>
+        <Route path="/list" element={<List/>} />
+        <Route path="/info" element={<Info/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

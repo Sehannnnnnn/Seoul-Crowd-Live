@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { writeFile } from "fs";
 import { SEOUL_PLACE_LIST } from "../repository/SeoulPlaceList.js";
 import { fetchLiveData } from "./fetchLiveData.js";
 import path from 'path';
@@ -10,7 +10,7 @@ export const fetchAllLiveData = async () => {
         console.log(data);
         alldata[id] = data;
     }
-    writeFileSync(path.resolve('../DB', 'liveData.json'), JSON.stringify(alldata),  (err) => {
+    writeFile(path.resolve('../DB', 'liveData.json'), JSON.stringify(alldata),  (err) => {
         if (err) {
           console.log('Failed to write updated data to file');
           return;
