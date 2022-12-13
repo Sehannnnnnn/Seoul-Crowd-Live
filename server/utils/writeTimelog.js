@@ -2,7 +2,7 @@ import { writeFile } from "fs";
 import path from "path";
 //장소별 실시간 정보 + XML 파싱 to JSON
 
-export const testWriteTimeLog = async (timelog) => {
+export const writeTimeLog = async () => {
 
   const curr = new Date();
   
