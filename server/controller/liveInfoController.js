@@ -5,6 +5,7 @@ import { readInfoDB } from "../utils/readInfoDB.js";
 
 const liveInfo = async (req, res) => {
     const id = parseInt(req.query.id);
+    console.log(id)
     const placeName = SEOUL_PLACE_LIST.filter((place) => place.id === id)[0].name
     await readInfoDB(id,placeName).then(data => {
         if (data.length == 1) {

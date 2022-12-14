@@ -10,9 +10,8 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  border: 2px solid #A4A71F;
+  border: 3px solid #A4A71F;
   border-radius: ${inactiveBorderRadius};
-  z-index: 3;
   box-shadow: 0;
   margin-right: 1rem;
   &:focus-within {
@@ -40,11 +39,11 @@ export const DropDownContainer = styled.ul`
   margin-left: auto;
   margin-right: auto;
   list-style-type: none;
-  margin-block-start: 0;
+  /* margin-block-start: 0;
   margin-block-end: 0;
-  margin-inline-start: 0px;
+  margin-inline-start: 0px;.
   margin-inline-end: 0px;
-  padding-inline-start: 0px;
+  padding-inline-start: 0px; */
   margin-top: -1px;
   padding: 0.5rem 0;
   border: 1px solid rgb(223, 225, 229);
@@ -63,7 +62,7 @@ export const DropDownContainer = styled.ul`
   }
 `;
 
-function Autocomplete () {
+function Autocomplete ({setText}) {
   const {placeList} = useSelector((state) => state.place)
   const inputRef = useRef(null);
   const [hasText, setHasText] = useState(false);
@@ -76,12 +75,14 @@ function Autocomplete () {
     if (inputValue === '') {
       setHasText(false);
       inputRef.current.value = '';
+      setText('')
     }
     else {
       setHasText(true);
       inputRef.current.value = inputValue;
+      setText(inputValue)
     }
-  }, [inputValue]);
+  }, [inputValue, setText]);
 
   
   const handleInputChange = (event) => {
