@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { ContainerCol } from '../component/styled/customset'
 import { useSelector } from 'react-redux'
 import seoulmap from '../static/seoulmap.png'
+import { FaSearchLocation } from 'react-icons/fa'
+import Autocomplete from '../component/Autocomplete'
 
 function Main() {
-    const {status, placeList} = useSelector((state) => state.place);
+    const {status} = useSelector((state) => state.place);
 
   return (
     <ContainerCol>
@@ -13,20 +15,34 @@ function Main() {
         <p>서울 명소 50곳에 실시간 인구정보를 바로 확인하세요!</p>
         {status === "succeed" ? 
             <>
-            <SearchBox type={'text'}></SearchBox>
+            <SearchContainer>
+            <Autocomplete type={'text'}></Autocomplete>
+            <SearchBtn>
+            <FaSearchLocation size="30" color="#A4A71F"/>
+            </SearchBtn>
+            </SearchContainer>
             <img src={seoulmap} alt="seoulmap.png"></img>
-            </> : <></>}
-        
+            </>: <></>}
     </ContainerCol>
   )
 }
 
-const SearchBox = styled.input`
-    width: 12rem;
-    height: 2rem;
-    border: 2px solid #A4A71F;
-    border-radius: 1rem;
-    margin-bottom: 40px;
-    font-size: 16px;
+const SearchBtn = styled.button`
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  &:hover {
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+  }
+`
+
+const SearchContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 `
 export default Main
