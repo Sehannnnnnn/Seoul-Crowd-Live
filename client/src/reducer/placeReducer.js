@@ -5,9 +5,6 @@ import axios from 'axios';
 const initialState = {
     status : "idle",  //'idle' | 'loading' | 'succeeded' | 'failed'
     placeList : [],
-    selected: {
-        //id, placeName
-    }
 }
 
 export const fetchPlaceList = createAsyncThunk(

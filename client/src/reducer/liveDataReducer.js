@@ -8,15 +8,9 @@ const initialState = {
 
 export const fetchLiveData = createAsyncThunk(
     "liveData/GET_LIVEDATA",
-    async ({id}) => {
-        console.log(id)
-        try {
-            const response = await axios.get('/info', {params: {id}})
-            return response.data;
-        } catch (e) {
-            console.log(e.message);
-            return {}
-        }
+    async () => {
+        const response = await axios.get('/info')
+        return response.data;
     }
 )
 

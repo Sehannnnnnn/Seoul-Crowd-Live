@@ -4,9 +4,10 @@ import Splash from './page/Splash';
 import Main from './page/Main';
 import List from './page/List';
 import Info from './page/Info';
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchPlaceList } from './reducer/placeReducer'
+import { fetchLiveData } from './reducer/liveDataReducer';
 function App() {
   const dispatch = useDispatch();
   function setScreenSize() {
@@ -16,6 +17,7 @@ function App() {
   useEffect(() => {
     setScreenSize();
     dispatch(fetchPlaceList())
+    dispatch(fetchLiveData())
   },[]);
 
   

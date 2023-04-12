@@ -3,53 +3,33 @@ import styled from 'styled-components'
 import { ContainerCol } from '../component/styled/customset'
 import { useSelector, useDispatch } from 'react-redux'
 import seoulmap from '../static/seoulmap.png'
-import { FaSearchLocation, FaArrowCircleRight } from 'react-icons/fa'
-import Autocomplete from '../component/Autocomplete'
-import { useEffect } from 'react'
-import { fetchLiveData } from '../reducer/liveDataReducer'
+import { FaArrowCircleRight } from 'react-icons/fa'
 
 function Main() {
     const dispatch = useDispatch();
     const {status, placeList} = useSelector((state) => state.place);
     const [text, setText] = useState("");
-    const [searchAble, setSearchAble] = useState(true);
-    const [place, setPlace] = useState({})
 
-    const onSearchHandler = () => {
-      if (searchAble) {
-        console.log(place);
-        setTimeout(() => 
-          dispatch(fetchLiveData(place)), 1000)
-      }
-    }
 
-    useEffect(() => {
-      const placeFound = placeList.filter(place => place.name === text);
-      setSearchAble(() => 
-        placeFound.length === 1
-      )
-      if (placeFound.length > 0) {
-        setPlace(placeFound[0])
-      }
-    }, [text, placeList])
   return (
     <ContainerCol>
+        <ImgMain src={seoulmap} alt="seoulmap.png"></ImgMain>
         <h1>어디로 가고 싶으세요?</h1>
         <p>서울 50곳에 실시간 인구정보를 바로 확인하세요!</p>
         {status === "succeed" ? 
             <>
-            <SearchContainer>
-            <Autocomplete setText={setText}></Autocomplete>
-            <SearchBtn onClick={onSearchHandler} disabled={!searchAble}>
-            <FaSearchLocation size="30" color={!searchAble ? 'grey' : '#A4A71F'}/>
-            </SearchBtn>
-            </SearchContainer>
-            <img src={seoulmap} alt="seoulmap.png"></img>
+            
             </>: <></>}
         <GoToList><FaArrowCircleRight size="15"/> 50곳 리스트로 보기 </GoToList>
     </ContainerCol>
   )
 }
+
+const ImgMain = styled.img`
+  margin: 3px 0;
+  width: 130px;
+  vertical-align: top;
+`
 
 const SearchBtn = styled.button`
   border: 2px solid #A4A71F;

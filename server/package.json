@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "",
-    "server": "nodemon index.js"
+    "serve": "nodemon index.js"
   },
   "author": "sehan-kim",
   "license": "ISC",
