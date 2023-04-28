@@ -20,7 +20,8 @@ function Main() {
             <>
             
             </>: <></>}
-        <GoToList><FaArrowCircleRight size="15"/> 50곳 리스트로 보기 </GoToList>
+        <LinkToList href="/list">
+          <FaArrowCircleRight size="15"/> 50곳 리스트로 보기 </LinkToList>
     </ContainerCol>
   )
 }
@@ -52,7 +53,8 @@ const SearchContainer = styled.div`
   margin-bottom: 15px;
 `
 
-const GoToList = styled.div`
+const LinkToList = styled.a`
+  display: block;
   padding: 15px;
   background-color: #1A8B8B;
   color: white;

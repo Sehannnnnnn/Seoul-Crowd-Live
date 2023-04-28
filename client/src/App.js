@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import Splash from './page/Splash';
 import Main from './page/Main';
 import List from './page/List';
-import Info from './page/Info';
+import About from './page/About';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchPlaceList } from './reducer/placeReducer'
@@ -27,7 +27,7 @@ function App() {
         <Route path="*" element={<Splash/>} />
         <Route path="/main" element={<Main/>}/>
         <Route path="/list" element={<List/>} />
-        <Route path="/info" element={<Info/>} />
+        <Route path="/about/:id" element={<About/>} />
       </Routes>
     </BrowserRouter>
   );

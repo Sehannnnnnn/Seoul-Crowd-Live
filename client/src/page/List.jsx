@@ -1,34 +1,73 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { useSelector } from 'react-redux'
+import PlaceElement from '../component/PlaceElement';
 function List() {
+    const cntByPage = 8;
     const status = useSelector((state) => state.liveData.status)
-    const placeInfoList = useSelector((state) => state.liveData.liveData); 
+    const placeList = useSelector((state) => state.liveData.liveData);
+    const [pageCnt,setPageCnt] = useState(0)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPlaceList, setCurrentPlaceList] = useState([])
+
+    useEffect(() => {
+      setPageCnt(parseInt(placeList.length/cntByPage)+1)
+    }, [placeList])
+
+
+    useEffect(() => {
+      setCurrentPlaceList(
+        placeList.filter((place,idx) => 
+          idx < currentPage*cntByPage && idx >= (currentPage-1)*cntByPage
+        )
+      )
+    }, [placeList, currentPage])
+
   return (
-    <div>List
+    <ListContainer>
+      <ListTitle>지역 50곳</ListTitle>
       <PlaceList>
-      {placeInfoList.length > 0 && placeInfoList.map((place) => <PlaceElement key={place.id}>
-        <div className='place_thumbnail'>
-          {/* 이미지, 붐빔태그, 이름 */}
-        </div>
-        <div></div>
+      {currentPlaceList.length > 0 && currentPlaceList.map((place) => <PlaceElement key={place.id} place={place}>
       </PlaceElement>)}
       </PlaceList>
-        
-    </div>
+      <PageBtnArea>
+        {[...Array(pageCnt)].map((e,i) => <PageBtn key={i} isOn={i+1 === currentPage} onClick={() => setCurrentPage(i+1)}>{i+1}</PageBtn>)}
+      </PageBtnArea>
+    </ListContainer>
   )
 }
 
+const ListContainer = styled.div`
+  padding-left: 10px;
+`
+
+const ListTitle = styled.h2`
+  margin-top: 20px;
+`
+
 const PlaceList = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-column-gap: 8px;
-  grid-row-gap: 12px;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 8px;
+  width: 100%;
+  min-width: 320px;
 `
 
-const PlaceElement = styled.li`
-  border: 1px solid black;
-  height: 32px;
+const PageBtnArea = styled.div`
+  text-align:center;
+  margin-right:10px;;
 `
+
+const PageBtn = styled.button`
+  line-height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  ${(props) => props.isOn ? 'border-bottom: 2px solid #1A8B8B' : ''}
+`
+
+
 export default List
