@@ -20,9 +20,18 @@ export const readAllInfo = async () => {
     data.sort((a,b) => {
         let a_congest = a.citydata.LIVE_PPLTN_STTS.AREA_CONGEST_LVL;
         let b_congest = b.citydata.LIVE_PPLTN_STTS.AREA_CONGEST_LVL;
-        console.log(SORT_KEY.indexOf(a_congest))
         return SORT_KEY.indexOf(a_congest) - SORT_KEY.indexOf(b_congest)
     })
-    console.log(data);
     return data
+}
+
+
+export const readImgThumbnail = async (id) => {
+    const response = readFileSync(path.resolve('../DB', 'imgData.json'))
+    let data = Object.values(JSON.parse(response))
+    if (id) {
+        let obj = data.filter((d) => d.id == id)
+        return obj
+    }
+    return data;
 }

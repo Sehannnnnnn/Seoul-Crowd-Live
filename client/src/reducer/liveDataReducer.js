@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const initialState = {
     status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
-    liveData : {}
+    liveData : []
 }
 
 export const fetchLiveData = createAsyncThunk(

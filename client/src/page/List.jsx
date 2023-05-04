@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux'
 import PlaceElement from '../component/PlaceElement';
 function List() {
-    const cntByPage = 8;
+    const cntByPage = 18;
     const status = useSelector((state) => state.liveData.status)
     const placeList = useSelector((state) => state.liveData.liveData);
     const [pageCnt,setPageCnt] = useState(0)
     const [currentPage, setCurrentPage] = useState(1)
     const [currentPlaceList, setCurrentPlaceList] = useState([])
+
 
     useEffect(() => {
       setPageCnt(parseInt(placeList.length/cntByPage)+1)
@@ -27,7 +28,7 @@ function List() {
     <ListContainer>
       <ListTitle>지역 50곳</ListTitle>
       <PlaceList>
-      {currentPlaceList.length > 0 && currentPlaceList.map((place) => <PlaceElement key={place.id} place={place}>
+      {currentPlaceList.length > 0 && currentPlaceList.map((place) => <PlaceElement key={place.id} place={place} isLoading={status}>
       </PlaceElement>)}
       </PlaceList>
       <PageBtnArea>
@@ -38,7 +39,7 @@ function List() {
 }
 
 const ListContainer = styled.div`
-  padding-left: 10px;
+  padding-left: 30px;
 `
 
 const ListTitle = styled.h2`
@@ -49,7 +50,7 @@ const PlaceList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  margin-top: 8px;
+  margin-top: 18px;
   width: 100%;
   min-width: 320px;
 `

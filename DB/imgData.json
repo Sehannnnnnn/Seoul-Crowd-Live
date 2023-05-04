@@ -1,0 +1,252 @@
+{
+    "1": {
+        "id": 1,
+        "name": "강남 MICE 관광특구",
+        "imgUrl": "https://img4.yna.co.kr/etc/inner/KR/2016/03/11/AKR20160311144700033_03_i_P4.jpg"
+    },
+    "2": {
+        "id": 2,
+        "name": "동대문 관광특구",
+        "imgUrl": "https://a.cdn-hotels.com/gdcs/production23/d1567/8ba54162-2412-41c8-93b4-5143ff4fc5ab.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+    },
+    "3": {
+        "id": 3,
+        "name": "명동 관광특구",
+        "imgUrl": "https://weekly.chosun.com/news/photo/202204/20036_40003_5116.jpg"
+    },
+    "4": {
+        "id": 4,
+        "name": "이태원 관광특구",
+        "imgUrl": "https://file.mk.co.kr/meet/neds/2022/08/image_readtop_2022_712551_16611472235135732.jpg"
+    },
+    "5": {
+        "id": 5,
+        "name": "잠실 관광특구",
+        "imgUrl": "https://www.lottehotel.com/content/dam/lotte-hotel/signiel/seoul/overview/local-guide/180708-7-2000-ove-seoul-signiel.jpg.thumb.768.768.jpg"
+    },
+    "6": {
+        "id": 6,
+        "name": "종로·청계 관광특구",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREs6t-QARtqTLLUHgm91AJ39eXvka4aNW1VRjzSTkP9tRjkOtOShAK328vOQLl-eRaXPw&usqp=CAU"
+    },
+    "7": {
+        "id": 7,
+        "name": "홍대 관광특구",
+        "imgUrl": "https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202211/01/chosunbiz/20221101122428311nfhl.jpg"
+    },
+    "8": {
+        "id": 8,
+        "name": "경복궁·서촌마을",
+        "imgUrl": "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2VOP/image/U_Kt2mO448F2Po4bFgjke5l5i-g"
+    },
+    "9": {
+        "id": 9,
+        "name": "광화문·덕수궁",
+        "imgUrl": "https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202211/14/seouleconomy/20221114174410170qoyz.jpg"
+    },
+    "10": {
+        "id": 10,
+        "name": "창덕궁·종묘",
+        "imgUrl": "https://korean.visitseoul.net/data/kukudocs/seoul2133/20220518/202205181554576571.jpg"
+    },
+    "11": {
+        "id": 11,
+        "name": "가산디지털단지역",
+        "imgUrl": "https://blog.kakaocdn.net/dn/CQTnZ/btrHzo0CwLg/yNWoDf7rBJEttf9MpZ6TV0/img.jpg"
+    },
+    "12": {
+        "id": 12,
+        "name": "강남역",
+        "imgUrl": "https://wimg.mk.co.kr/meet/neds/2017/03/image_readtop_2017_163255_14890579952804146.jpg"
+    },
+    "13": {
+        "id": 13,
+        "name": "건대입구역",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/MjAxODA4MDdfNzIg/MDAxNTMzNTczNjY3MjEy.AltULnVPFhWdOoxytLgSsGTPv4iTyzrOAzNQprPUYdUg.C_3HWQU6LWEmIyvpvMWuxndoQlmY7_5G5bBEeHGmfEcg.JPEG.darori78/DSC09213.JPG?type=w800"
+    },
+    "14": {
+        "id": 14,
+        "name": "고속터미널역",
+        "imgUrl": "https://blog.kakaocdn.net/dn/b2RWog/btqxj1HWprq/2lsvP5d9KMp10BQDNa5SYk/img.jpg"
+    },
+    "15": {
+        "id": 15,
+        "name": "교대역",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/20150507_131/rkdeo3_1430998230301YdgaT_JPEG/20150211_140328.jpg?type=w2"
+    },
+    "16": {
+        "id": 16,
+        "name": "구로디지털단지역",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWeHPBwwMFBKwYtop-ob0DRnEkKFrZEOs5BXlwa23BYehH7Vvr3rdMhdMqftUef8UZdM&usqp=CAU"
+    },
+    "17": {
+        "id": 17,
+        "name": "서울역",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/MjAxOTA1MjJfMjU5/MDAxNTU4NTAxNzUyODA0.ZQZsTvtFRsDm8P-jnbM3SxmnZc0t7YM5QEBZ7S77ytEg.22Z2Dlsg4XUkJV2NciNb9NmmzrECEsyvVjG8Kb1lFlMg.JPEG.tmdqja1756/20190522_131329.jpg?type=w800"
+    },
+    "18": {
+        "id": 18,
+        "name": "선릉역",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsjx0-ndu1hR_RbOwEkT7azMGCeG3zpWpPLFoQD1JmSWBe9IVBE1sPwWyQruz45Blu5P4&usqp=CAU"
+    },
+    "19": {
+        "id": 19,
+        "name": "신도림역",
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Q43298_Sindorim_B01.JPG/1200px-Q43298_Sindorim_B01.JPG"
+    },
+    "20": {
+        "id": 20,
+        "name": "신림역",
+        "imgUrl": "https://cphoto.asiae.co.kr/listimglink/6/2020051507073038122_1589494050.jpg"
+    },
+    "21": {
+        "id": 21,
+        "name": "신촌·이대역",
+        "imgUrl": "https://post-phinf.pstatic.net/MjAxODExMTJfMjc3/MDAxNTQxOTk4MDEyNjk1.bRgNRKttag2WziqMt1whlhJbVUzZit1TKdnwp7RRApQg.PtoqeLb_iUBe_Fl5v7vSBt5HmECvwT9u-yDizfvPOrQg.JPEG/01-1.jpg?type=w1200"
+    },
+    "22": {
+        "id": 22,
+        "name": "역삼역",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN_3x8WAI88zrZORWjOted4m5R-D1Ep862z38xM14nlr2bU6nPaN62BraMi1tEUfNpBlM&usqp=CAU"
+    },
+    "23": {
+        "id": 23,
+        "name": "연신내역",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/20160628_41/pulcher45_1467099300970E7t4c_JPEG/%B4%EB%C7%A5%BB%E7%C1%F8.jpg?type=w2"
+    },
+    "24": {
+        "id": 24,
+        "name": "용산역",
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%EC%9A%A9%EC%82%B0%EC%97%AD.jpg"
+    },
+    "25": {
+        "id": 25,
+        "name": "왕십리역",
+        "imgUrl": "https://i.namu.wiki/i/C6nDvi7XzkPsivjY-ovRRgovfKMjalQJi6BvGMLXyTcB1ZL8rFz9oAvj6w8sgF4sKcZa_4QwrUWPqZse017CNg.webp"
+    },
+    "26": {
+        "id": 26,
+        "name": "DMC(디지털미디어시티)",
+        "imgUrl": "https://t1.daumcdn.net/cfile/tistory/994AF13A5FB5335F1C"
+    },
+    "27": {
+        "id": 27,
+        "name": "창동 신경제 중심지",
+        "imgUrl": "https://i.namu.wiki/i/XohzrB-au4icCJgGQuUk7B15N4YQKLMJZH-xHLXtVksYLr2uBCjElsufUvnTSmyfRBrrZAaVsum2nsBNkwWS9A.webp"
+    },
+    "28": {
+        "id": 28,
+        "name": "노량진",
+        "imgUrl": "https://minio.nculture.org/amsweb-opt/multimedia_assets/118/28918/8834/c/28918-medium-size.jpg"
+    },
+    "29": {
+        "id": 29,
+        "name": "낙산공원·이화마을",
+        "imgUrl": "https://korean.visitseoul.net/comm/getImage?srvcId=POST&parentSn=16320&fileTy=POSTTHUMB&fileNo=2"
+    },
+    "30": {
+        "id": 30,
+        "name": "북촌한옥마을",
+        "imgUrl": "https://korean.visitseoul.net/data/kukudocs/seoul2133/20220518/202205181617250471.jpg"
+    },
+    "31": {
+        "id": 31,
+        "name": "가로수길",
+        "imgUrl": "https://korean.visitseoul.net/comm/getImage?srvcId=POST&parentSn=291&fileTy=POSTTHUMB&fileNo=2"
+    },
+    "32": {
+        "id": 32,
+        "name": "성수카페거리",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/MjAxOTA5MTZfMjM4/MDAxNTY4NjM5MjUyMDI5.a8QWLfQcHQw2MX_RgyM8buhL_gX7IBkz1kguIm1HiIMg.1BxUMnpAPTs3zcpIY92GJMGvExUMbhDf3CL6x93MHBEg.JPEG.park-yeji/_DSC0288.JPG?type=w800"
+    },
+    "33": {
+        "id": 33,
+        "name": "수유리 먹자골목",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/20150413_48/jsl8511_1428851048401dD7DV_JPEG/IMG_6594.JPG?type=w2"
+    },
+    "34": {
+        "id": 34,
+        "name": "쌍문동 맛집거리",
+        "imgUrl": "https://mp-seoul-image-production-s3.mangoplate.com/391357/743008_1621766921249_45613?fit=around|359:240&crop=359:240;*,*&output-format=jpg&output-quality=80"
+    },
+    "35": {
+        "id": 35,
+        "name": "압구정로데오거리",
+        "imgUrl": "https://www.gangnam.go.kr//upload/portal/bbs/2020/12/21/thumb_default_da0c378c-acc7-4740-8ca1-881e28d46ed1.jpg"
+    },
+    "36": {
+        "id": 36,
+        "name": "여의도",
+        "imgUrl": "https://storage.doopedia.co.kr/upload/_upload/image5/2111/10/211110024065552/211110024065552_thumb_400.jpg"
+    },
+    "37": {
+        "id": 37,
+        "name": "영등포 타임스퀘어",
+        "imgUrl": "https://storage.doopedia.co.kr/upload/_upload/image5/2111/10/211110024065552/211110024065552_thumb_400.jpg"
+    },
+    "38": {
+        "id": 38,
+        "name": "인사동·익선동",
+        "imgUrl": "https://mediahub.seoul.go.kr/wp-content/uploads/2016/12/05a09e011aac3d3549896f934775e4cd.jpg"
+    },
+    "39": {
+        "id": 39,
+        "name": "국립중앙박물관·용산가족공원",
+        "imgUrl": "https://www.museum.go.kr/ux/content/images/intro/temp/img_mobile_intro_bg02.jpg"
+    },
+    "40": {
+        "id": 40,
+        "name": "남산공원",
+        "imgUrl": "https://ojsfile.ohmynews.com/STD_IMG_FILE/2015/0731/IE001855931_STD.JPG"
+    },
+    "41": {
+        "id": 41,
+        "name": "뚝섬한강공원",
+        "imgUrl": "https://mediahub.seoul.go.kr/wp-content/uploads/2016/09/f14227c39889392571a93cc2e3e5edf6.jpg"
+    },
+    "42": {
+        "id": 42,
+        "name": "망원한강공원",
+        "imgUrl": "https://ak-d.tripcdn.com/images/1i61c2215au0vjeflAF0A.jpg?proc=source/trip"
+    },
+    "43": {
+        "id": 43,
+        "name": "반포한강공원",
+        "imgUrl": "https://a.travel-assets.com/findyours-php/viewfinder/images/res40/250000/250706-Banpo-Hangang-Park.jpg"
+    },
+    "44": {
+        "id": 44,
+        "name": "북서울꿈의숲",
+        "imgUrl": "https://storage.doopedia.co.kr/upload/_upload/image/1310/07/131007018533755/131007018533755_thumb_1024_w.jpg"
+    },
+    "45": {
+        "id": 45,
+        "name": "서울대공원",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/MjAyMjExMDZfMjky/MDAxNjY3NjY0MTY4NjQy.gWqrxnb_MpHI4ThHldsDNo3NbpieZawietUN3FeOnrkg.1icqPhNI0RGwvcjGL6YUyeGDPOwvyKjlqoPswQAKq-og.JPEG.wkwmd81/%EA%B3%BC%EC%B2%9C%EC%84%9C%EC%9A%B8%EB%8C%80%EA%B3%B5%EC%9B%90_%EB%8F%99%EB%AC%BC%EC%9B%90_%EB%A6%AC%ED%94%84%ED%8A%B8_14.jpg?type=w800"
+    },
+    "46": {
+        "id": 46,
+        "name": "서울숲공원",
+        "imgUrl": "https://t4.ftcdn.net/jpg/04/41/28/39/360_F_441283928_x6wy8WX1Dnh4czUsxHgpXIqqztm939EV.jpg"
+    },
+    "47": {
+        "id": 47,
+        "name": "월드컵공원",
+        "imgUrl": "https://mediahub.seoul.go.kr/wp-content/uploads/editor/images/000377/Resized0001.jpg"
+    },
+    "48": {
+        "id": 48,
+        "name": "이촌한강공원",
+        "imgUrl": "https://mblogthumb-phinf.pstatic.net/20160512_198/bethehost_1463032938608trJ0X_JPEG/%C7%D1%B0%AD%B5%A5%C0%CC%C6%AE%C3%DF%C3%B5-%C0%CC%C3%CC%C7%D1%B0%AD%B0%F8%BF%F86.jpg?type=w800"
+    },
+    "49": {
+        "id": 49,
+        "name": "잠실종합운동장",
+        "imgUrl": "https://newsimg.sedaily.com/2022/11/01/26DGHEWBNC_1.jpg"
+    },
+    "50": {
+        "id": 50,
+        "name": "잠실한강공원",
+        "imgUrl": "https://korean.visitseoul.net/comm/getImage?srvcId=POST&parentSn=4023&fileTy=POSTTHUMB&fileNo=2"
+    }
+}
