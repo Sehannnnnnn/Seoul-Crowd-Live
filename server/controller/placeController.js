@@ -13,7 +13,6 @@ const imgByPlace = async (req, res) => {
     }
     else {
         const id = parseInt(req.query.id);
-        console.log(id)
         await readImgThumbnail(id).then(data => {
             if (data.length == 1) {
                 res.status(200).send(data[0])

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import getPlaceImage from '../utils/getPlaceImage';
 import GenderGraph from '../component/about/GenderGraph';
 import Message from '../component/about/Message';
+import backBtn from '../static/backbtn.png'
 
 const tagTheme = {
   "여유": '#1A8B8B',
@@ -15,6 +16,7 @@ const tagTheme = {
 }
 
 function About({place}) {
+  const navigate = useNavigate();
   const params = useParams();
   const placeID = parseInt(params.id);
 
@@ -48,11 +50,12 @@ function About({place}) {
   return (
     placeInfo && cityData && imgUrl &&
     <Container>
-    <Header>
+    <Header theme={theme}>
       {placeInfo.name}
+      <BackBtn onClick={() => navigate(-1)}></BackBtn>
     </Header>
     <Body>
-    <ImgBox bg={imgUrl}></ImgBox>
+    <ImgBox src={imgUrl}></ImgBox>
     <Message tag={cityData.AREA_CONGEST_LVL} msg={cityData.AREA_CONGEST_MSG} theme={theme}></Message>
     <GenderGraph male={cityData.MALE_PPLTN_RATE} female={cityData.FEMALE_PPLTN_RATE} theme={theme}>
       {cityData.AREA_CONGEST_LVL}
@@ -92,41 +95,42 @@ function About({place}) {
 }
 
 const Container = styled.div`
-  width: 410px;
 `
 
 const Header = styled.div`
-  margin-top: 18px;
-  padding-bottom: 18px;
+  position: relative;
+  padding: 18px 0px;
   font-size: 24px;
   font-weight: bold;
   text-indent: 20px;
-  border-bottom: 3px solid #1A8B8B;
+  background-color: ${(props) => props.theme};
+  color: #eee;
+  box-shadow: 2px 1px 1px #aaa;
 `
 
 const Body = styled.div`
     padding: 0 20px;
 `
-
-const ImgBox = styled.div`
-  background-image: url(${(props) => props.bg});
-  background-size: 100% 260px;
-  background-repeat: no-repeat;
-  margin-top: 20px;
-  width: 100%;
-  height: 260px;
-  position: relative;
-  &::after {
-    content: '';
+const BackBtn = styled.a`
+    display: block;
     position: absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    top:0;
-    background: rgba(0,0,0,0.2);
-    border: 3px solid #aaa;
-  }
+    right: 10px;
+    top: 16px;
+    bottom: 16px;
+    width: 40px;
+    background-image: url(${backBtn});
+    background-size: 31px 31px;
+    background-repeat: no-repeat;
 `
+const ImgBox = styled.img`
+  margin: 0 auto;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 24px;
+  position: relative;
+  border: 1px solid #aaa;
+`
+
 
 
 export default About

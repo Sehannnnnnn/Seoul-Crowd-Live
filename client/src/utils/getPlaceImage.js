@@ -2,9 +2,8 @@
 import axios from "axios"
 
 const getPlaceImage = async (id, callback) => {
-    const imgUrl = await axios.get('http://localhost:8000/place/img', {params: {id}})
-    .then((res) => res.data.imgUrl);
-    return callback(imgUrl)
+    return await axios.get('http://localhost:8000/place/img', {params: {id}})
+    .then((res) => res.data.imgUrl).then((url) => callback(url));
 }
 
 export default getPlaceImage

@@ -10,12 +10,8 @@ import { fetchPlaceList } from './reducer/placeReducer'
 import { fetchLiveData } from './reducer/liveDataReducer';
 function App() {
   const dispatch = useDispatch();
-  function setScreenSize() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }
+
   useEffect(() => {
-    setScreenSize();
     dispatch(fetchPlaceList())
     dispatch(fetchLiveData())
   },[]);

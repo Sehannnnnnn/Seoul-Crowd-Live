@@ -25,8 +25,9 @@ function List() {
     }, [placeList, currentPage])
 
   return (
+    <>
+    <ListTitle>서울시 지역 50곳</ListTitle>
     <ListContainer>
-      <ListTitle>지역 50곳</ListTitle>
       <PlaceList>
       {currentPlaceList.length > 0 && currentPlaceList.map((place) => <PlaceElement key={place.id} place={place} isLoading={status}>
       </PlaceElement>)}
@@ -35,15 +36,19 @@ function List() {
         {[...Array(pageCnt)].map((e,i) => <PageBtn key={i} isOn={i+1 === currentPage} onClick={() => setCurrentPage(i+1)}>{i+1}</PageBtn>)}
       </PageBtnArea>
     </ListContainer>
+    </>
   )
 }
 
 const ListContainer = styled.div`
   padding-left: 30px;
+  padding-top: 14px;
+  background-color: #eee;
 `
 
 const ListTitle = styled.h2`
-  margin-top: 20px;
+  margin: 20px 30px;
+  font-size: 26px;
 `
 
 const PlaceList = styled.ul`
