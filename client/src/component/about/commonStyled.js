@@ -11,11 +11,3 @@ export const AbtContainer = styled.div`
 export const AbtH3 = styled.h3`
     font-size: 24px;
 `
-
-export const BackBtn = styled.div`
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 40px;
-`

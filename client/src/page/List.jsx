@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { useSelector } from 'react-redux'
 import PlaceElement from '../component/PlaceElement';
+import { ContainerCol } from '../component/styled/customset';
 function List() {
     const cntByPage = 18;
     const status = useSelector((state) => state.liveData.status)
@@ -25,7 +26,7 @@ function List() {
     }, [placeList, currentPage])
 
   return (
-    <>
+    <ContainerCol>
     <ListTitle>서울시 지역 50곳</ListTitle>
     <ListContainer>
       <PlaceList>
@@ -36,7 +37,7 @@ function List() {
         {[...Array(pageCnt)].map((e,i) => <PageBtn key={i} isOn={i+1 === currentPage} onClick={() => setCurrentPage(i+1)}>{i+1}</PageBtn>)}
       </PageBtnArea>
     </ListContainer>
-    </>
+    </ContainerCol>
   )
 }
 
