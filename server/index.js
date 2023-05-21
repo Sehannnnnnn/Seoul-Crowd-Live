@@ -1,11 +1,14 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import placeRouter from './router/placeRouter.js';
 import liveInfoRouter from './router/liveInfoRouter.js';
 import morgan from 'morgan';
 import { scheduleJob } from 'node-schedule';
 import { fetchAllLiveData } from './utils/fetchAllLiveData.js';
 import { writeTimeLog } from './utils/writeTimelog.js';
+
+dotenv.config()
 
 const app = express();
 const MAIN_PORT = 8000;

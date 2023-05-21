@@ -7,7 +7,6 @@ export const fetchAllLiveData = async () => {
     const alldata = {};
     for (let {id, name} of SEOUL_PLACE_LIST) {
         const data = await fetchLiveData(id, name);
-        console.log(data);
         alldata[id] = data;
     }
     writeFile(path.resolve('../DB', 'liveData.json'), JSON.stringify(alldata),  (err) => {

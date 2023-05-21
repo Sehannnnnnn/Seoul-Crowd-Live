@@ -7,7 +7,7 @@ function Splash() {
         setTimeout(() => 
             navigate('/main')
         , 1000*4)
-    }, [])
+    }, [navigate])
     
   return (
     <>
@@ -49,7 +49,7 @@ const TitleOval = styled.div`
     justify-content: center;
     box-shadow: 5px 5px 5px black;
     opacity: 0;
-    animation: ${showSmooth} 2s 1s
+    animation: ${showSmooth} 2s 1s;
 `
 
 
