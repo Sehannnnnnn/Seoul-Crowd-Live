@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
-export const ContainerCol = styled.div`
+export const MainWrap = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100vw;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 `
 
-export const ContainerRow = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+
+export const Divider = styled.div`
+    margin: 20px 0;
+    height: 3px;
+    border-radius: 50%;
+    width: 80%;
+    background-color: #1A8B8B;
+    box-shadow: 1px 1px 1px 1px #eee;
 `

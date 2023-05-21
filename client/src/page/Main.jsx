@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { ContainerCol } from '../component/styled/customset'
+import { Divider, MainWrap } from '../component/styled/customset'
 import { useSelector } from 'react-redux'
 import seoulmap from '../static/seoulmap.png'
 import { FaArrowCircleRight } from 'react-icons/fa'
@@ -16,7 +16,7 @@ function Main() {
     
 
   return (
-    <ContainerCol>
+    <MainWrap>
         <MainH1>서울시 인구 정보 조회 서비스</MainH1>
         <ImgMain src={seoulmap} alt="seoulmap.png"></ImgMain>
         <MainP>어디로 가고 싶으세요?</MainP>
@@ -24,20 +24,21 @@ function Main() {
         <LinkToList href="/list">
           <FaArrowCircleRight size="15"/> 50곳 리스트로 보기
         </LinkToList>
+        <Divider></Divider>
         <RandomAreaBox className="RndBox">
           {status === "succeed" && placeList.map((place) => {
             let [x,y] = randomXYCord()
             return <PlaceName key={place.id} x={x} y={y}>{place.name}</PlaceName>
           })}
         </RandomAreaBox>
-    </ContainerCol>
+    </MainWrap>
   )
 }
 
 const MainH1 = styled.h1`
   font-size: 32px;
   line-height: 38px;
-  margin-top: 20px;
+  margin-top: 100px;
   color: #125a5a;
 `
 
@@ -51,27 +52,13 @@ const ImgMain = styled.img`
   vertical-align: top;
 `
 
-const SearchBtn = styled.button`
-  border: 2px solid #A4A71F;
-  background-color: white;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 30%;
-  &:hover {
-    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
-  }
-  &:disabled {
-    background-color: lightgrey;
-  }
-`
-
 const LinkToList = styled.a`
   display: block;
   padding: 15px;
   background-color: #1A8B8B;
   color: white;
   border-radius: 10px;
-  margin-top: 15px;
+  margin: 15px 0 60px 0;
   box-shadow: 0 4px 6px rgb(32 33 36 / 18%);
   &:hover {
     box-shadow: 0 4px 6px rgb(32 33 36 / 35%);
@@ -80,8 +67,7 @@ const LinkToList = styled.a`
 
 const RandomAreaBox = styled.div`
   font-size: 0px;
-  width: 100%;
-  margin-top: 20px;
+  margin: 60px 100px;
   white-space: pre-wrap;
   text-align: center;
 `

@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AbtContainer, 
-AbtH3 } from './commonStyled'
+AbtH3, Comment, GraphArea } from './commonStyled'
 
 function GenderGraph({male, female, theme}) {
+    const large = male > female ? '남성' : '여성';
+    const small = male > female ? '여성' : '남성';
+    const diff = Math.round(Math.abs((male-female) * 100)) / 100;
   return (
     <AbtContainer theme={theme}>
-        <AbtH3>실시간 성별</AbtH3>
+        <AbtH3>실시간 성비</AbtH3>
+        {diff === 0 ? 
+            <Comment>남성 50% 여성 50% 로 동일한 비율을 갖고 있어요.</Comment> : 
+            <Comment><em>{large}</em>이 <em>{small}</em> 보다 <em className="num">{diff}%</em> 더 많아요.
+            </Comment>
+        }
         <GraphArea>
             <MaleStack src={require('../../static/male.png')} rate={male}>
             </MaleStack>
@@ -25,17 +33,6 @@ function GenderGraph({male, female, theme}) {
 }
 
 
-
-
-const GraphArea = styled.div`
-    position: relative;
-    margin-top: 20px;
-    height: 200px;
-    border: 1px solid #555;
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
-`
-
 const MaleStack = styled.img`
     position: absolute;
     bottom: 2px;
@@ -45,6 +42,7 @@ const MaleStack = styled.img`
     height: ${(props) => props.rate*3}px;
     filter: drop-shadow(2px 2px 2px gray);
 `
+
 const FemaleStack = styled.img`
     position: absolute;
     bottom: 2px;
