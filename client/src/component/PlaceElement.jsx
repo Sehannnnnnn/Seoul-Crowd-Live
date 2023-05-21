@@ -49,6 +49,11 @@ const EleContainer = styled.div`
   box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
   margin-right: 24px;
   margin-bottom: 24px;
+  opacity: 0.8;
+  transition: 0.3s;
+  :hover {
+    opacity: 1;
+  }
 `
 
 const EleStatusTag = styled.span`
@@ -91,8 +96,7 @@ const SkelelonElement = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(164,167,31);
-    background: linear-gradient(90deg, rgba(164,167,31,0.5634628851540616) 0%, rgba(26,139,139,1) 100%);
+    background: linear-gradient(90deg, rgba(26,139,139,0.3) 0%, rgba(26,139,139,1) 100%);
 `
 
 const blockAnimation = keyframes`

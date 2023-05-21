@@ -27,7 +27,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1A8B8B;
 `
 const showSmooth = keyframes`
     0% {

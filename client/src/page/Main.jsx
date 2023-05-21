@@ -17,7 +17,8 @@ function Main() {
 
   return (
     <MainWrap>
-        <MainH1>서울시 인구 정보 조회 서비스</MainH1>
+        <MainH1>SEOUL CROWD LIVE</MainH1>
+        <MainH2>서울시 인구 정보 조회 서비스</MainH2>
         <ImgMain src={seoulmap} alt="seoulmap.png"></ImgMain>
         <MainP>어디로 가고 싶으세요?</MainP>
         <MainP>서울 50곳에 실시간 인구정보를 바로 확인하세요!</MainP>
@@ -36,10 +37,15 @@ function Main() {
 }
 
 const MainH1 = styled.h1`
-  font-size: 32px;
-  line-height: 38px;
-  margin-top: 100px;
+  font-size: 42px;
+  margin-bottom: 10px;
   color: #125a5a;
+`
+
+const MainH2 = styled.h2`
+  font-size: 30px;
+  line-height: 38px;
+  color: #1A8B8B;
 `
 
 const MainP = styled.p`

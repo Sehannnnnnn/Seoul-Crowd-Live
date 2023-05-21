@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { AbtContainer, 
 AbtH3, Comment, GraphArea } from './commonStyled'
 
@@ -31,7 +31,14 @@ function GenderGraph({male, female, theme}) {
     </AbtContainer>
   )
 }
-
+const graphAnimation = (h) => keyframes`
+    0% {
+        height: 0;
+    }
+    100% {
+        height: ${h}px;
+    }
+`
 
 const MaleStack = styled.img`
     position: absolute;
@@ -41,6 +48,7 @@ const MaleStack = styled.img`
     vertical-align: bottom;
     height: ${(props) => props.rate*3}px;
     filter: drop-shadow(2px 2px 2px gray);
+    animation: ${(props) => graphAnimation(props.rate*3)} 1000ms linear;
 `
 
 const FemaleStack = styled.img`
@@ -49,8 +57,9 @@ const FemaleStack = styled.img`
     left: 75%;
     transform: translateX(-50%);
     vertical-align: bottom;
-    height: ${(props) => props.rate*3}px;
     filter: drop-shadow(2px 2px 2px gray);
+    height: ${(props) => props.rate*3}px;
+    animation: ${(props) => graphAnimation(props.rate*3)} 1000ms linear;
 `
 
 const TextArea = styled.ul`
@@ -65,5 +74,7 @@ const TextArea = styled.ul`
         font-size: 30px;
     }
 `
+
+
 
 export default GenderGraph
