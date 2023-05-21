@@ -33,3 +33,15 @@
 - express, axios, node-fetch, node-schedule, xml2json, dotenv
 
 ### DB - json 파일
+
+## ⚠️ 주의
+아직 배포가 되지 않았습니다! 
+
+git clone으로 내려받은 후
+client 실행 : /client 
+1. <code>npm i</code> 모듈 다운
+2. <code>npm run start</code> 리액트 실행
+
+server 실행 : /server
+1. <code>npm i</code> 모듈 다운
+2. <code>npm run serve</code> 노드 서버 실행ㅎ
