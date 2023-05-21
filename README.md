@@ -1,7 +1,9 @@
 # Seoul-Crowd-Live
+
 서울 실시간 인구정보 조회 서비스 - 붐빔
 
-제작: Sehannnnnnn
+제작: FE: Sehannnnnnn BE: Sehannnnnnn
+
 기간: 2023.01- 2023.05
 
 활용 API 제공처 : https://data.seoul.go.kr/SeoulRtd/
