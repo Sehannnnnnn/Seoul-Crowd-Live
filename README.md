@@ -3,13 +3,13 @@
 
 활용 API 제공처 : https://data.seoul.go.kr/SeoulRtd/
 
-- Splash, Main 뷰
+## Splash, Main 뷰 <br>
 ![시연 - Splash, Main](https://github.com/Sehannnnnnn/Seoul-Crowd-Live/assets/79133770/53ce4680-e87f-40c8-b183-bc8c3be5301d)
 
-- List 뷰
+## List 뷰 <br>
 ![시연 - List](https://github.com/Sehannnnnnn/Seoul-Crowd-Live/assets/79133770/151b79b8-8993-4afb-88ad-73b8deed8014)
 
-- Graph 뷰
+## Graph 뷰 <br>
 ![시연 - Graph](https://github.com/Sehannnnnnn/Seoul-Crowd-Live/assets/79133770/31a4df9a-71ab-49af-89da-946cffaec7ed)
 
 ## 🔭 주요 기능
