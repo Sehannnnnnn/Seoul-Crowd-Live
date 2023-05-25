@@ -7,7 +7,7 @@ import { sortPlaceList } from '../reducer/liveDataReducer';
 import { Divider } from '../component/styled/customset';
 function List() {
     const dispatch = useDispatch();
-    const cntByPage = 18;
+    const cntByPage = 10;
     const status = useSelector((state) => state.liveData.status)
     const placeList = useSelector((state) => state.liveData.liveData);
     const [pageCnt,setPageCnt] = useState(0)
@@ -24,7 +24,7 @@ function List() {
     }
 
     useEffect(() => {
-      setPageCnt(parseInt(placeList.length/cntByPage)+1)
+      setPageCnt(parseInt(placeList.length/cntByPage))
     }, [placeList])
 
 

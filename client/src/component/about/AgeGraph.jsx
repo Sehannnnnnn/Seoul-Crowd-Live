@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { AbtContainer, AbtH3, GraphArea, Comment } from './commonStyled'
 
 function AgeGraph({agedata,theme}) {
@@ -41,14 +41,24 @@ function AgeGraph({agedata,theme}) {
   )
 }
 
+const graphAnimation = (h) => keyframes`
+    0% {
+        height: 0;
+    }
+    100% {
+        height: ${h}px;
+    }
+`
+
 const GraphStack = styled.div`
     position: absolute;
     bottom: 0;
     left: ${(props) => props.position/10*11+8}%;
     width: 30px;
-    height: ${(props) => props.rate*3}px;
     background-color: ${(props) => props.color};
     box-shadow: 5px 0 5px -5px #333;
+    height: ${(props) => props.rate*3}px;
+    animation: ${(props) => graphAnimation(props.rate*3)} 1s linear;
     .value {
       position: absolute;
       top: -20px;
